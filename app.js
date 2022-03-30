@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, ()=> {
-  console.log(`Demo app is up and listening to port: ${port}`);
+  console.log(`Listening to port: ${port}`);
 })
  
