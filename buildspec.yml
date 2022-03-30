@@ -22,7 +22,7 @@ phases:
     commands:
       - echo Pushing to ECR
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/node-api:latest
-      - printf '{"imageUri":"%s"}' $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/node-api:latest  > imageDetail.json
+      - printf '{"imageUri":"%s"}' $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/node-api:latest  > imagedefinitions.json
 
 artifacts:
   files:
