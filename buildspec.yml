@@ -10,12 +10,12 @@ phases:
     commands:
       - echo Installing dependencies
       - npm install
-      - $(aws ecr get-login --no-include-email --region us-east-1)
 
   build:
     commands:
       - echo Building and tagging Docker image
       - docker build -t node-api:latest .
+      - aws ecr get-login-password --region us-east-1 | docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com
       - docker tag node-api:latest $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/node-api:latest
 
   post_build:
