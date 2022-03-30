@@ -21,3 +21,8 @@ phases:
     commands:
       - echo Pushing to ECR
       - docker push 887308979175.dkr.ecr.us-east-1.amazonaws.com/node-api:latest
+      - printf '[{"name":"node-api","imageUri":"887308979175.dkr.ecr.us-east-1.amazonaws.com/node-api:latest"}]' > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
