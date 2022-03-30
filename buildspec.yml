@@ -14,8 +14,8 @@ phases:
   build:
     commands:
       - echo Building and tagging Docker image
-      - docker build -t node-api:latest .
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com
+      - docker build -t node-api .
       - docker tag node-api:latest $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/node-api:latest
 
   post_build:
