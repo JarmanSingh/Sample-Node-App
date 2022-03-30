@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
 
 app.get('/', (req, res) => {
   const currYear = new Date().getFullYear();
-  res.send(`<h1> Demo App</h1> <h3>Welcome to ${currYear}</h3> <p> User Agent: ${res.locals.ua}</p>`);
+  res.send(`<h1>Demo App</h1> <h3>Welcome to ${currYear}</h3> <p>User Agent: ${res.locals.ua}</p>`);
 })
 
 app.listen(port, ()=> {
