@@ -30,3 +30,4 @@ variable "aws_ecs_node_app_service_name" {
   description = "Target Amazon ECS Cluster NodeJs App Service name"
   default     = "node-api"
 }
+
