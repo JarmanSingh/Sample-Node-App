@@ -18,15 +18,15 @@ variable "nodejs_project_repository_branch" {
 
 variable "artifacts_bucket_name" {
   description = "S3 Bucket for storing artifacts"
-  default     = "your-project-name-cicd-artifacts-bucket"
+  default     = "node-api-artifacts-bucket"
 }
 
 variable "aws_ecs_cluster_name" {
   description = "Target Amazon ECS Cluster Name"
-  default     = "MicroServicesCluster"
+  default     = "node-api"
 }
 
 variable "aws_ecs_node_app_service_name" {
   description = "Target Amazon ECS Cluster NodeJs App Service name"
-  default     = "nodeAppService"
+  default     = "node-api"
 }

@@ -498,7 +498,7 @@ resource "aws_codepipeline" "node_app_pipeline" {
         "SourceArtifact",
       ]
       owner     = "AWS"
-      provider  = "CodeCommit"
+      provider  = "GitHub"
       run_order = 1
       version   = "1"
     }
